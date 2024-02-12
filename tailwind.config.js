@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}"
+  ],
   theme: {
     fontSize: {
       xs: ['12px', '16px'],
@@ -9,7 +12,7 @@ export default {
       lg: ['18px', '21.94px'],
       xl: ['20px', '24.38px'],
       '2xl': ['24px', '29.26px'],
-      '3xl': ['28px', '50px'],
+      '3xl': ['28px', '50p  x'],
       '4xl': ['48px', '58px'],
       '8xl': ['96px', '106px']
     },
@@ -35,8 +38,8 @@ export default {
       screens: {
         "wide": "1440px"
       }
-    },
+    }
   },
-  plugins: [],
+  plugins: []
 }
 

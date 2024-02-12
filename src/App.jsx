@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <div>
-        This is an application.
+        <p className="font-bold text-3xl">This is an application.</p>
       </div>
     </>
   )
