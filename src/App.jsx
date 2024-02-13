@@ -1,6 +1,7 @@
 import './App.scss'
 import Nav from './components/Nav'
 import Categories from './sections/Categories'
+import Footer from './sections/Footer'
 
 function App() {
 
@@ -22,7 +23,7 @@ function App() {
         Footer
       </div>
       <div className='mt-10'>
-        Footer
+        <Footer />
       </div>
     </main>
   )
