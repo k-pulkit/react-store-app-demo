@@ -6,15 +6,16 @@ export default {
   ],
   theme: {
     fontSize: {
-      xs: ['12px', '16px'],
-      sm: ['14px', '20px'],
-      base: ['16px', '19.5px'],
-      lg: ['18px', '21.94px'],
-      xl: ['20px', '24.38px'],
-      '2xl': ['24px', '29.26px'],
-      '3xl': ['28px', '50p  x'],
-      '4xl': ['48px', '58px'],
-      '8xl': ['96px', '106px']
+      xs: ['0.75rem', '1rem'],
+      sm: ['0.875rem', '1.25rem'],
+      base: ['1rem', '1.219rem'],
+      lg: ['1.025rem', '1.371rem'],
+      xl: ['1.25rem', '1.524rem'],
+      '2xl': ['1.5rem', '1.829rem'],
+      '3xl': ['1.75rem', '3.125rem'],
+      '4xl': ['3rem', '3.625rem'],
+      '8xl': ['6rem', '6.625rem']
+
     },
     extend: {
       fontFamily: {
