@@ -15,17 +15,17 @@ const categories = [
       "imageUrl": "https://i.ibb.co/0jqHpnp/sneakers.png"
     },
     {
-      "id": 3,
+      "id": 4,
       "title": "accessories",
       "imageUrl": "https://i.ibb.co/0jqHpnp/sneakers.png"
     },
     {
-      "id": 4,
+      "id": 5,
       "title": "womens",
       "imageUrl": "https://i.ibb.co/GCCdy8t/womens.png"
     },
     {
-      "id": 5,
+      "id": 6,
       "title": "mens",
       "imageUrl": "https://i.ibb.co/R70vBrQ/men.png"
     }
