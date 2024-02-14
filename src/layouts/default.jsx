@@ -1,11 +1,11 @@
 import React from 'react'
-import Nav from './components/Nav'
-import Categories from './sections/Categories'
-import Footer from './sections/Footer'
+import Nav from '../components/Nav.component'
+import Categories from '../routes/categories'
+import Footer from '../components/Footer.component'
 
 import { Outlet } from 'react-router-dom';
 
-const Layout = () => {
+const DefaultLayout = () => {
   return (
     <main id="main" className="relative w-full bg-gray-200 min-h-screen pb-28">
         <div className="sticky top-0 z-50 max-container flex justify-center">
@@ -21,4 +21,4 @@ const Layout = () => {
   )
 }
 
-export default Layout;
+export default DefaultLayout;
