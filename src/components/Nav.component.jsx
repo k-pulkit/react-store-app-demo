@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react'
 import useScrollPosition from '../hooks/useScrollPosition'
 import { NavLink, Link } from 'react-router-dom';
 import { FaShoppingCart } from "react-icons/fa";
@@ -6,6 +7,7 @@ import { IoMdHome } from "react-icons/io";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 const Nav = () => {
+  const [DropdownMenuOpen, SetDropdownMenuOpen] = useState(false);
   const scrolledDown = useScrollPosition(10);
   const activeClass = "bg-white text-slate-900 rounded-xl font-bold outline outline-green-700"
   const inactiveClass = "hover:underline outline outline-transparent"
@@ -28,9 +30,12 @@ const Nav = () => {
             </NavLink>
         </div>
 
-        <div className="relative flex flex-row gap-3 md:hidden">
-          <RxHamburgerMenu />
-          <div className='flex flex-col w-[10rem] justify-center items-center max-md:mx-2 mx-6 max-sm:my-9 my-6 py-3 border-2 border-blue-950 absolute -top-0 right-0 text-white bg-blue-800 rounded-lg'>
+        <div className="relative flex flex-row gap-3 md:hidden" >
+          <button className="hover:cursor-pointer" onClick={() => SetDropdownMenuOpen(!DropdownMenuOpen)}>
+            <RxHamburgerMenu />
+          </button>
+          <div className={`flex flex-col w-[10rem] justify-center items-center max-md:mx-2 mx-6 max-sm:my-9 my-6 py-3 border-2 border-blue-950 absolute -top-0 right-0 text-white bg-blue-800 bg-opacity-90 rounded-lg
+                          ${DropdownMenuOpen ? "": "hidden"}`}>
             <NavLink to="/shop" end className={navClass_hiddenMenu}>Shop</NavLink>
             <NavLink to="/contact" end className={navClass_hiddenMenu}>Contact</NavLink>
             <NavLink to="/signin" end className={navClass_hiddenMenu}>Signin</NavLink>
