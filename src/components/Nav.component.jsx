@@ -21,9 +21,9 @@ const Nav = () => {
           <span>Home</span>
         </NavLink> 
         <div className="flex flex-row gap-3 max-md:hidden">
-            <NavLink to="/shop" end className={navClass}>Shop</NavLink>
+            {/* <NavLink to="/shop" end className={navClass}>Shop</NavLink>
             <NavLink to="/contact" end className={navClass}>Contact</NavLink>
-            <NavLink to="/signin" end className={navClass}>Signin</NavLink>
+            <NavLink to="/signin" end className={navClass}>Signin</NavLink> */}
             <NavLink to="/cart" end className={`flex flex-row items-center justify-center gap-1 ${navClass}`}>
               <FaShoppingCart className='h-4' />
               <span>Cart</span>
