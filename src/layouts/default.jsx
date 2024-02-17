@@ -1,6 +1,5 @@
 import React from 'react'
 import Nav from '../components/Nav.component'
-import Categories from '../routes/categories'
 import Footer from '../components/Footer.component'
 
 import { Outlet } from 'react-router-dom';

@@ -15,11 +15,6 @@ const categories = [
       "imageUrl": "https://i.ibb.co/0jqHpnp/sneakers.png"
     },
     {
-      "id": 4,
-      "title": "accessories",
-      "imageUrl": "https://i.ibb.co/0jqHpnp/sneakers.png"
-    },
-    {
       "id": 5,
       "title": "womens",
       "imageUrl": "https://i.ibb.co/GCCdy8t/womens.png"

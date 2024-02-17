@@ -14,6 +14,7 @@ export default {
       '2xl': ['1.5rem', '1.829rem'],
       '3xl': ['1.75rem', '3.125rem'],
       '4xl': ['3rem', '3.625rem'],
+      '6xl': ['5rem', '4.625rem'],
       '8xl': ['6rem', '6.625rem']
 
     },

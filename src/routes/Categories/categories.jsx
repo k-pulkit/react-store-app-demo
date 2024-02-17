@@ -1,7 +1,6 @@
 import React from 'react'
 import CategoryCard from '../../components/CategoryCard.component';
 import { categories } from '../../constants'; 
-import { Route } from 'react-router-dom'
 
 const Categories = () => {
   return (
