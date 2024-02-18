@@ -1,4 +1,5 @@
 export function addCartItem(items, itemToAdd) {
+    // console.log("Adding an item to cart")
     const existingItem = items.find(item => item.id === itemToAdd.id)
     return existingItem ? 
             items.map(item => item.id === itemToAdd.id ?

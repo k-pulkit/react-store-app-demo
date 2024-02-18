@@ -1,25 +1,48 @@
 import { createSelector } from "reselect";
 
 // Select the cart
-const selectCart = createSelector(
+export const selectCart = createSelector(
     [(state) => state.cart],
     (cart) => (cart)
 )
 
-const selectCartItems = createSelector(
+export const selectCartItems = createSelector(
     [selectCart],
     (cart) => (cart.items)
 )
 
-const selectCartTotal = createSelector(
-    [selectCartitems],
+export const selectCartTotal = createSelector(
+    [selectCartItems],
     (items) => items.reduce((total, item) => total + item.quantity*item.price, 0)
 )
 
-const selectCartCount = createSelector(
-    [selectCartitems],
+export const selectCartCount = createSelector(
+    [selectCartItems],
     (items) => items.reduce((total, item) => total + item.quantity, 0)
 )   
+
+// Select an item from cart
+export const selectCartItem = createSelector(
+    [
+        (state) => state.cart.items,
+        (_, itemId) => itemId
+    ],
+    (items, itemId) => {
+        let existing = items.find(item => item.id === itemId)
+        return existing ? items?.filter(item => item.id === itemId)[0] : null
+    }
+)
+
+export const selectCartItemCount = createSelector(
+    [
+        selectCartItem,
+        (_, ItemId) => ItemId
+    ],
+    (item, itemId) => {
+
+    }
+)
+
 
 
 

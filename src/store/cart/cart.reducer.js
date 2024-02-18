@@ -9,9 +9,9 @@ export const cartSlice = createSlice({
     name: 'Cart',
     initialState: CART_INITIAL_STATE,
     reducers: {
-        actionAddItemToCart: (state, action) => addCartItem(state.items, action.payload),
-        actionRemoveItemFromCart: (state, action) => removeCartItem(state.items, action.payload),
-        actionClearItemFromCart: (state, action) => clearCartItem(state.items, action.payload)
+        actionAddItemToCart: (state, action) => {state.items = addCartItem(state.items, action.payload)},
+        actionRemoveItemFromCart: (state, action) => {state.items = removeCartItem(state.items, action.payload)},
+        actionClearItemFromCart: (state, action) => {state.items = clearCartItem(state.items, action.payload)}
     }
 })
 

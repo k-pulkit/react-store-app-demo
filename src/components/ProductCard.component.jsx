@@ -1,18 +1,21 @@
-import React from 'react'
+import React from 'react';
+import { useDispatch, useSelector, shallowEqual  } from 'react-redux';
+import { selectCartItem } from '../store/cart/cart.selector';
+import { actionAddItemToCart, actionRemoveItemFromCart } from '../store/cart/cart.reducer';
 import { IoMdAdd } from "react-icons/io";
 import { FaPlus, FaMinus } from "react-icons/fa6";
 
-let testCounter=0;
 
-let mockAddHandler = () => {
-    console.log("Clicked me")
-    testCounter = testCounter + 1;
-}
 
-const ProductCard = ({ item: {id, name, imageUrl, price}, containerClasses }) => {
+const ProductCard = ({ item, containerClasses }) => {
+  const {id, name, imageUrl, price} = item
+  const currentItem = useSelector((state) => selectCartItem(state, id), shallowEqual )
+  const quantity = currentItem?.quantity || 0
 
-  console.log(testCounter)
-
+  const dispatch = useDispatch()
+  const addItemHandler = (item) => () => dispatch(actionAddItemToCart(item))
+  const removeItemHandler = (item) => () => dispatch(actionRemoveItemFromCart(item))
+    
   return (
       <div className={`group relative mx-auto flex flex-col justify-start items-start ${containerClasses||""}`}>
         <div className={`shadow-xl shadow-red-950 transition ease-out duration-300 group-hover:shadow-3xl group-hover:shadow-red-950`}>
@@ -21,11 +24,11 @@ const ProductCard = ({ item: {id, name, imageUrl, price}, containerClasses }) =>
              src={imageUrl}
              />
             {
-            testCounter === 1 ?
+            quantity === 0 ?
                 (<button className='mx-2 mb-[1rem] px-3 py-1 pr-5 absolute bottom-8 w-18 bg-coral-red font-semibold text-white font-palanquin rounded-xl text-lg
                                 hover:bg-red-600
                                 flex items-center justify-center'
-                        onClick={mockAddHandler}>
+                        onClick={addItemHandler(item)}>
                     <IoMdAdd/>
                     <span>Add</span>
                 </button>)
@@ -34,14 +37,14 @@ const ProductCard = ({ item: {id, name, imageUrl, price}, containerClasses }) =>
                     <button className='px-1 py-1 w-18 font-semibold text-white font-palanquin rounded-xl
                                 hover:bg-red-700
                                 flex items-center justify-center'
-                        onClick={mockAddHandler}>
+                        onClick={removeItemHandler(item)}>
                         <FaMinus/>
                     </button>
-                    <span className='text-white text-lg font-bold'>3</span>
+                    <span className='text-white text-lg font-bold'>{quantity}</span>
                     <button className='px-1 py-1 font-semibold text-white font-palanquin rounded-xl
                                 hover:bg-red-700
                                 flex items-center justify-center'
-                        onClick={mockAddHandler}>
+                        onClick={addItemHandler(item)}>
                         <FaPlus/>
                     </button>
                 </div>)    
