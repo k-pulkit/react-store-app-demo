@@ -23,5 +23,5 @@ export function removeCartItem(items, itemToRemove) {
 }
 
 export function clearCartItem(items, itemToRemove) {
-    return items.map(item => item.id !== itemToRemove.id)
+    return items.filter(item => item.id !== itemToRemove.id)
 }
