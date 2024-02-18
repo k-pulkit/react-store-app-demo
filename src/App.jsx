@@ -3,7 +3,7 @@ import Home from './routes/Home/home'
 import About from './routes/About'
 import Category from './routes/Category/category';
 import Error404 from './routes/Errors/error404';
-import Shop from './routes/Shop/shop';
+import Cart from './routes/Cart/cart';
 
 import { createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
 
@@ -16,6 +16,7 @@ function App() {
                 {/* <Route path='/shop' element={<Shop />}/> */}
                 <Route path='/category/:category' element={<Category />}/>
                 <Route path="/about" element={<About />} />
+                <Route path="/cart" element={<Cart />} />
               </Route>
         )))
 }

@@ -12,7 +12,7 @@ const CategoryCard = ({ category: {title, imageUrl}, containerClasses }) => {
         </div>
         <div className='mt-3 w-[62%] text-white bg-coral-red rounded-xl flex justify-center items-center border-[1px] border-transparent transition ease-out duration-300 group-hover:bg-white-400 group-hover:text-coral-red hover:cursor-pointer group-hover:border-coral-red'>
             <Link to={`/category/${title}`}>
-              <p className='relative py-1 self-cente text-lg font-semibold tracking-[0.3em] font-montserrat uppercase'>{title}</p>
+              <p className='relative py-1 self-cente text-lg font-semibold tracking-[0.1em] font-montserrat uppercase'>{title}</p>
             </Link>
         </div>
       </div>
