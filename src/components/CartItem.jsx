@@ -36,7 +36,7 @@ const CartItem = ({item}) => {
             <div className='hover:underline hover:cursor-pointer hover:text-blue-800' onClick={clearItemHandler(item)}>
                 <p className='text-sm'>Remove item</p>
             </div>
-            <div className='w-[15%] mx-3 mb-[1rem] py-1 flex flex-row justify-around items-center bg-coral-red rounded-lg'>
+            <div className='w-[17%] max-xl:w-[20%] max-lg:w-[32%] mx-3 mb-[1rem] py-1 flex flex-row justify-around items-center bg-coral-red rounded-lg'>
                 <button className='px-1 py-1 w-18 font-semibold text-white font-palanquin rounded-xl
                             hover:bg-red-700
                             flex items-center justify-center'
