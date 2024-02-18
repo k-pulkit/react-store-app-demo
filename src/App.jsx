@@ -5,11 +5,11 @@ import Category from './routes/Category/category';
 import Error404 from './routes/Errors/error404';
 import Cart from './routes/Cart/cart';
 
-import { createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
+import { createHashRouter, createRoutesFromElements, Route } from 'react-router-dom';
 
 function App() {
 
-  return (createBrowserRouter(
+  return (createHashRouter(
             createRoutesFromElements(
               <Route path="/" element={<DefaultLayout />} errorElement={<Error404 />}>
                 <Route index element={<Home />}/>
