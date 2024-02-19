@@ -11,4 +11,4 @@ In addition, the application leverages the latest React hooks to manage componen
 https://github.com/k-pulkit/react-store-app-demo/assets/71238192/6d2fd1fa-f8ec-43c5-9c48-cf222990e1cc
 
 # Link 
-https://github.com/k-pulkit/react-store-app-demo
+[https://github.com/k-pulkit/react-store-app-demo](https://www.pulkitkapoor.com/react-store-app-demo)https://www.pulkitkapoor.com/react-store-app-demo
