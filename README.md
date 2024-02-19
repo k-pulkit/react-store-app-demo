@@ -8,7 +8,7 @@ In addition, the application leverages the latest React hooks to manage componen
 
 # Demo 
 
-<video src='/assets/demo.mp4' width=180 />
+https://github.com/k-pulkit/react-store-app-demo/assets/71238192/6d2fd1fa-f8ec-43c5-9c48-cf222990e1cc
 
 # Link 
 https://github.com/k-pulkit/react-store-app-demo
