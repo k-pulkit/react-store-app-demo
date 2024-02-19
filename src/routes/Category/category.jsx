@@ -18,7 +18,7 @@ const Category = () => {
 
   return (
     <div>
-      <div className='max-container px-10 relative justify-center items-center grid grid-cols-1 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-x-20 gap-y-10'>
+      <div className='place-items-start place-content-start max-container px-10 relative justify-center items-center grid grid-cols-1 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-x-16 gap-y-10'>
         <h1 className='text-4xl mt-10 text-left font-bold font-palanquin col-span-1 xl:col-span-4 lg:col-span-3 md:col-span-2'>
           Shop
           <span className="text-coral-red"> {asTitleCase(category)}</span>

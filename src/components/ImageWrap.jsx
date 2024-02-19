@@ -18,7 +18,7 @@ const ImageWithSpinner = ({ src, classes }) => {
                 <img
                     src={src}
                     alt="example"
-                    onLoad={() => setTimeout(() => setLoading(false), 2000)}
+                    onLoad={() => setTimeout(() => setLoading(false), 10)}
                     className={`${"object-cover object-center w-full h-[98%]"} ${loading ? 'hidden' : 'block'}`}
                 />
             </div>

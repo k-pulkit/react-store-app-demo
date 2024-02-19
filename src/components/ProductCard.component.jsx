@@ -4,7 +4,7 @@ import { selectCartItem } from '../store/cart/cart.selector';
 import { actionAddItemToCart, actionRemoveItemFromCart } from '../store/cart/cart.reducer';
 import { IoMdAdd } from "react-icons/io";
 import { FaPlus, FaMinus } from "react-icons/fa6";
-
+import ImageWithSpinner from './ImageWrap';
 
 
 const ProductCard = ({ item, containerClasses }) => {
@@ -17,12 +17,15 @@ const ProductCard = ({ item, containerClasses }) => {
   const removeItemHandler = (item) => () => dispatch(actionRemoveItemFromCart(item))
     
   return (
-      <div className={`group relative mx-auto flex flex-col justify-start items-start ${containerClasses||""}`}>
-        <div className={`shadow-xl shadow-red-950 transition ease-out duration-300 group-hover:shadow-3xl group-hover:shadow-red-950`}>
-            <img
+      <div className={`group w-full relative flex flex-col justify-start items-start ${containerClasses||""}`}>
+        <div className={`w-full h-72 shadow-xl shadow-red-950 transition ease-out duration-300 group-hover:shadow-3xl group-hover:shadow-red-950`}>
+            <div className='rounded-t-lg h-full w-full border border-slate-gray overflow-hidden'>
+                <ImageWithSpinner src={imageUrl} />
+            </div>
+            {/* <img
              className='rounded-t-lg object-cover object-center h-48 w-96 max-md:w-[35rem] max-md:h-[15rem] border border-slate-gray'
              src={imageUrl}
-             />
+             /> */}
             {
             quantity === 0 ?
                 (<button className='mx-2 mb-[1rem] px-3 py-1 pr-5 absolute bottom-8 w-18 bg-coral-red font-semibold text-white font-palanquin rounded-xl text-lg
