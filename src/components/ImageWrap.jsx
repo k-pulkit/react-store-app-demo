@@ -13,7 +13,7 @@ const ImageWithSpinner = ({ src, classes }) => {
   return (
     <>
         {
-            <div className='h-full w-full flex justify-center items-center'>
+            <div className='h-full w-full flex justify-center items-center brightness-110 hover:brightness-150'>
                 {<ClipLoader color={'#123abc'} loading={loading} css={override} size={20}/>}
                 <img
                     src={src}

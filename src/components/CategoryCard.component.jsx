@@ -8,7 +8,7 @@ const CategoryCard = ({ category: {title, imageUrl}, containerClasses }) => {
       <div className={`group mt-4 relative flex flex-col justify-center items-center ${containerClasses||""}`}>
         <div className="relative pb-2 w-56 h-40 max-md:w-[83vw] max-lg:w-[30vw]
                         flex flex-row justify-center items-center 
-                        shadow-xl shadow-red-950 overflow-clip
+                        shadow-md shadow-red-650 overflow-clip
                         transition ease-out duration-300 group-hover:shadow-3xl group-hover:shadow-red-950">
           <ImageWithSpinner src={imageUrl} classes="" />
           {/* <img

@@ -14,7 +14,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div id="categories" className='relative m-16 h-full min-h-52 flex flex-row flex-wrap justify-center items-center gap-8 bg-opacity-65
+        <div id="categories" className='relative m-16 h-full min-h-52 flex flex-row flex-wrap justify-center items-center gap-8
                                         max-lg:pb-3'>
           {
               categories.map((category) => (
